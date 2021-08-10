@@ -1,6 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
+<<<<<<< Updated upstream
 import "./css/App.scss";
+=======
+>>>>>>> Stashed changes
 
 //Pages / Screens
 import Splash from "./pages/Splash";

@@ -6,6 +6,10 @@ import WazZaap from "./WazZaap";
 function App() {
   return (
     <Provider store={appstore}>
+<<<<<<< Updated upstream
+=======
+      <h1>Test</h1>
+>>>>>>> Stashed changes
       <WazZaap></WazZaap>
     </Provider>
   );
