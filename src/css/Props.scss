@@ -1,3 +1,8 @@
+.abc {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .abs {
   position: absolute;
   &.fill {
@@ -7,12 +12,34 @@
     right: 0px;
   }
 }
-.abc {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.fixed {
+  position: fixed;
+  &.fill {
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+  }
 }
-
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+body {
+  background: #d4dbd9;
+}
+.green-belt {
+  background: #009688;
+  height: 127px;
+}
+.messenger {
+  background: white;
+  top: 20px;
+  bottom: 20px;
+  left: 100px;
+  right: 100px;
+  box-shadow: 0px 0px 7px rgba(44, 44, 44, 0.57);
+}
 .s30 {
   font-size: 30px;
 }

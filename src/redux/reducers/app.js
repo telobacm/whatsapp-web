@@ -1,6 +1,6 @@
 const initialState = {
   debug: true,
-  loaded: false,
+  loaded: true,
 };
 
 export default function (state = initialState, action) {

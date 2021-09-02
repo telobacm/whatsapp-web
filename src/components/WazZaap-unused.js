@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
-<<<<<<< Updated upstream
+import { BrowserRouter } from "react-router-dom";
 import "./css/App.scss";
-=======
->>>>>>> Stashed changes
+import Messenger from "./Messenger";
 
 //Pages / Screens
-import Splash from "./pages/Splash";
+import Splash from "./Splash";
 
 function WazZaap(props) {
-  const { loaded } = props;
+  const { loaded, setState } = props;
+  useEffect(() => {
+    setTimeout(() => {
+      setState(true);
+    }, 1000);
+  }, []);
 
-  return loaded ? <h1>App is Loaded</h1> : <Splash />;
+  return <BrowserRouter>{loaded ? <Messenger /> : <Splash />}</BrowserRouter>;
 }
 
 const mapStateToProps = (state) => {
