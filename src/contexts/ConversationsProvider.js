@@ -9,11 +9,11 @@ export function useConversations() {
 }
 
 export function ConversationsProvider({ id, children }) {
-  //list of conversations
+  //list of conversations & set-get conversations to localStorage
   const [conversations, setConversations] = useLocalStorage("conversations", []);
   const [selectedConversationIndex, setSelectedConversationIndex] = useState(0);
   const { contacts } = useContacts();
-  // console.log("conversations", conversations);
+  console.log("conversations", conversations);
 
   //to create new conversations as global state
   function createConversation(recipients) {
@@ -29,6 +29,7 @@ export function ConversationsProvider({ id, children }) {
       const newMessage = { sender, text };
       const newConversation = prevConversations.map((conversation) => {
         console.log("convo", conversation);
+        console.log("convos", conversations);
         if (arrayEquality(conversation.recipients, recipients)) {
           madeChange = true;
           console.log("if pertama");
